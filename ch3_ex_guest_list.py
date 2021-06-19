@@ -71,8 +71,11 @@ str_doge3 = lst_myguestlist.pop(5)
 
 print(f"We regret to inform you, dear {str_doge3.title()}, that Timmy has fallen down the well again. Otherwise we would have totally let you in.\n")
 
-print(f"We hereby do (again) formally invite {lst_myguestlist[0]} to the (doge-free) Grand Ball.\n")
-print(f"We hereby do (again) formally invite {lst_myguestlist[1]} to the (doge-free) Grand Ball.\n")
-print(f"We hereby do (again) formally invite {lst_myguestlist[2]} to the (doge-free) Grand Ball.\n")
-print(f"We hereby do (again) formally invite {lst_myguestlist[3]} to the (doge-free) Grand Ball.\n")
-print(f"We hereby do (again) formally invite {lst_myguestlist[4]} to the (doge-free) Grand Ball.\n")
+for catguest in lst_myguestlist:
+    print(f"We hereby do (again) formally invite {catguest} to the (doge-free) Grand Ball.\n")
+
+#print(f"We hereby do (again) formally invite {lst_myguestlist[0]} to the (doge-free) Grand Ball.\n")
+#print(f"We hereby do (again) formally invite {lst_myguestlist[1]} to the (doge-free) Grand Ball.\n")
+#print(f"We hereby do (again) formally invite {lst_myguestlist[2]} to the (doge-free) Grand Ball.\n")
+#print(f"We hereby do (again) formally invite {lst_myguestlist[3]} to the (doge-free) Grand Ball.\n")
+#print(f"We hereby do (again) formally invite {lst_myguestlist[4]} to the (doge-free) Grand Ball.\n")
