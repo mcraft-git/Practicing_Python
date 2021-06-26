@@ -1,13 +1,14 @@
 
 # here's another example of a pizza program (hungry yet?)
 # let's use a tuple because these are fixed menu items that wont change
-available_toppings = ('peperroni','sausage','bacon','pineapple','extra cheese','mushroom')
+available_toppings = ('pepperroni','sausage','bacon','pineapple','extra cheese','mushroom', 'black olives')
 
 print('Welcome to Python Pizza! Choose up to three toppings for your pizza from our menu.\n')
 
 requested_toppings =['bacon','pineapple','fish chips','extra cheese','mushroom']
 
 if requested_toppings:
+
     fin_toppings = []
     for topping in requested_toppings:
         if topping in available_toppings:
@@ -16,6 +17,7 @@ if requested_toppings:
         else:
             print(f"We don't have {topping}, and NEVER will.")
     print('\n')
+
     if (len(fin_toppings)) == 3:
         print(f'Your {fin_toppings.pop()}, {fin_toppings.pop()} and {fin_toppings.pop()} pizza is ready!')
     elif (len(fin_toppings)) == 2:
