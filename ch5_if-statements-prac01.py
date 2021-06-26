@@ -8,7 +8,7 @@ for c in cars:
     else:
         print(c.title())
 
-# the '!=' operator means IF these DO NOT match...
+# the '!=' operator means 'IF these DO NOT match...'
 toppings = ['pepperoni','sausage','mushroom','anchovies','tomato']
 print('\n')
 for t in toppings:
