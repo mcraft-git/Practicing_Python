@@ -1,0 +1,28 @@
+{ "People":
+
+    [
+        // The first object in this array has a key ("Name") that has an object for a value
+        {
+            "Id": 1,
+            "Name": {"FN": "Jane", "LN": "Doe"},
+            "Email": "j.doe@names.com",
+            "Active": true
+        },
+        // In the second object, the "Name" key has an array for a value
+        {
+            "Id": 2,
+            "Name": ["John", "Smith"],
+            "Email": "j.smith@names.com",
+            "Active": true
+        },
+
+        {
+            "Id": 3,
+            "FirstName": "Diamond",
+            "LastName": "Jim",
+            "Email": "d.jim@names.com",
+            "Active": false
+        }
+
+    ]
+}
