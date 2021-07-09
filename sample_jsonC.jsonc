@@ -1,0 +1,33 @@
+// This is a sample JSONC (JSON with comments) file
+
+{ "People":
+    // Square brackets indicate an array
+    // Which include elements that are automatically numbered from 0
+    [
+        // Curly brackets indicate JSON objects
+        {
+            "Id": 1,
+            "FirstName": "Jane",
+            "LastName": "Doe",
+            "Email": "j.doe@names.com",
+            "Active": true
+        },
+
+        {
+            "Id": 2,
+            "FirstName": "John",
+            "LastName": "Smith",
+            "Email": "j.smith@names.com",
+            "Active": true
+        },
+
+        {
+            "Id": 3,
+            "FirstName": "Diamond",
+            "LastName": "Jim",
+            "Email": "d.jim@names.com",
+            "Active": false
+        }
+
+    ]
+}
