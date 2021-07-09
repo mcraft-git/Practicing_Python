@@ -4,21 +4,21 @@
 // this object is an array, notice the square brackets
 myObj = [
     {
-        "Id": "1",
+        "Id": 1,
         "FirstName": "Jane",
         "LastName": "Doe",
         "Email": "j.doe@names.com"
     },
 
     {
-        "Id": "2",
+        "Id": 2,
         "FirstName": "John",
         "LastName": "Smith",
         "Email": "j.smith@names.com"
     },
 
     {
-        "Id": "3",
+        "Id": 3,
         "FirstName": "Diamond",
         "LastName": "Jim",
         "Email": "d.jim@names.com"
@@ -38,24 +38,27 @@ myObj2 = { "People":
 
     [
         {
-            "Id": "1",
+            "Id": 1,
             "FirstName": "Jane",
             "LastName": "Doe",
-            "Email": "j.doe@names.com"
+            "Email": "j.doe@names.com",
+            "Active": true            
         },
 
         {
-            "Id": "2",
+            "Id": 2,
             "FirstName": "John",
             "LastName": "Smith",
-            "Email": "j.smith@names.com"
+            "Email": "j.smith@names.com",
+            "Active": true            
         },
 
         {
-            "Id": "3",
+            "Id": 3,
             "FirstName": "Diamond",
             "LastName": "Jim",
-            "Email": "d.jim@names.com"
+            "Email": "d.jim@names.com",
+            "Active": false            
         }
 
     ]
@@ -68,3 +71,7 @@ console.log(myObj2.People[2]);
 // How about the LastName value for the second item in the array,km 
 console.log("");
 console.log(myObj2.People[1].LastName);
+
+// The "typeof" operator returns the variable type
+console.log("");
+console.log(typeof myObj2.People[1].Active);
