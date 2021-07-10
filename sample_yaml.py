@@ -4,7 +4,7 @@
 import yaml
 from yaml import load, load_all
 
-stream =open('sample_yaml.yml','r')
+stream = open('sample_yaml.yml','r')
 data = load_all(stream, Loader=yaml.FullLoader)
 
 for doc in data:

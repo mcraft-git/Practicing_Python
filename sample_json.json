@@ -6,23 +6,25 @@
             "Id": "1",
             "FirstName": "Jane",
             "LastName": "Doe",
-            "Email": "j.doe@names.com"
+            "Email": "j.doe@names.com",
+            "Active": true
         },
 
         {
             "Id": "2",
             "FirstName": "John",
             "LastName": "Smith",
-            "Email": "j.smith@names.com"
+            "Email": "j.smith@names.com",
+            "Active": true
         },
 
         {
             "Id": "3",
             "FirstName": "Diamond",
             "LastName": "Jim",
-            "Email": "d.jim@names.com"
+            "Email": "d.jim@names.com",
+            "Active": false
         }
-
 
     ]
 }
