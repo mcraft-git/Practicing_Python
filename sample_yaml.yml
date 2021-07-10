@@ -1,0 +1,28 @@
+---
+people:
+- Id: 1
+  Code: 524.37
+  FirstName: Jane
+  LastName: Doe
+  Email: j.doe@names.com
+  Active: true
+- Id: 2
+  Code: 813.09
+  FirstName: John
+  LastName: Smith
+  Email: j.smith@names.com
+  Active: true
+- Id: 3
+  Code: 102.9
+  FirstName: Joe
+  LastName: Dirt
+  Email: j.dirt@names.com
+  Active: false
+...
+--- # This is the start of a new document in YAML
+ANumber: 145
+AFloat: 19.8075
+AString: Hello World!
+
+         This is a new line thanks to a preceding blank line.
+AQuotedString: "Quotes are perfectly acceptable.\nThis is a new line thanks to escape characters within quotes!"

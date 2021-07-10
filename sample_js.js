@@ -26,10 +26,10 @@ myObj = [
 
 ]
 
-// Therefore, when we log to the terminal we can call "0" for the first element
+// Therefore, when we log to the terminal we can use "0" as an arg to return the first element
 console.log(myObj[0]);
 
-// Specific key values can also be output
+// Specific key values can also be returned for output
 console.log("")
 console.log(myObj[2].Email);
 
@@ -68,10 +68,10 @@ myObj2 = { "People":
 console.log("");
 console.log(myObj2.People[2]);
 
-// How about the LastName value for the second item in the array,km 
+// How about the LastName value for the second item in the array
 console.log("");
 console.log(myObj2.People[1].LastName);
 
-// The "typeof" operator returns the variable type
+// The "typeof" operator returns the variable type of the target
 console.log("");
 console.log(typeof myObj2.People[1].Active);
