@@ -1,14 +1,14 @@
 { "People":
 
     [
-        // The first object in this array has a key ("Name") that has an object for a value
+        // Within the first object of this array, the "Name" key has an object for its value
         {
             "Id": 1,
             "Name": {"FN": "Jane", "LN": "Doe"},
             "Email": "j.doe@names.com",
             "Active": true
         },
-        // In the second object, the "Name" key has an array for a value
+        // Within this second object, the "Name" key has an array for its value
         {
             "Id": 2,
             "Name": ["John", "Smith"],
