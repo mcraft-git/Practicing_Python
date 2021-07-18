@@ -15,8 +15,7 @@ print(f"Sarah's favorite language is {language}.\n")
 del favorite_languages['phil']
 print(favorite_languages)
 
-# The preferred way to pull values from a dictionary is the GET method, which will return a default value if the key is not found.
-# The automatic default is 'none', but a different value can be set manually.
+# The preferred way to pull values from a dictionary is the GET method, which will return a default value if the key is not found. The automatic default is 'none', but a different value can be set manually.
 # Using the GET method can avoid errors.
 alien_03 = {'speed': 'slow', 'x_pos': 0}
 point_value = alien_03.get('points', 'No point value assigned.')

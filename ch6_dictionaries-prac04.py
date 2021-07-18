@@ -22,7 +22,7 @@ favorite_languages = {
 for n, l in favorite_languages.items():
     print(f"\n{n.title()}'s favorite language is {l.title()}.")
 
-# if we just wanted the names (keys) for the people in our dictionary, we would use the keyword '.keys()'
+# if we just wanted the names (keys) for the people in our dictionary, we would use the method '.keys()'
 for k in favorite_languages.keys():
     print(f"{k.title()}")
 print("\n")
@@ -33,5 +33,9 @@ for n in favorite_languages.keys():
     print(f"Hi, {n.title()}.")
     # below, the value of the key 'n' is returned from the dictionary and copied to variable 'l'
     if n in friends:
-        l = favorite_languages[n].title() 
+        l = favorite_languages[n].title()
         print(f"\t{n.title()}, I see you like {l}!")
+
+# We can use the .keys() method to check if a key is in a list
+if 'erin' not in favorite_languages.keys():
+    print("Erin, please take our poll!")
