@@ -3,7 +3,7 @@ aliens = []
 
 # Use a loop with the range() method to spawn 30 green aliens (the grunts)
 # Notice each 'new_alien' is a dictionary in the 'alien' list
-for alien_number in range(30):
+for alien_spawner in range(30):
     new_alien = {'color':'green','points':5,'speed':'slow'}
     aliens.append(new_alien)
 
