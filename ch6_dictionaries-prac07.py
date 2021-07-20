@@ -20,6 +20,7 @@ favorite_languages = {
     'phil':['python','haskell'],
     'darlene':['c#','javascript'],
 }
+
 for name,languages in favorite_languages.items():
     friends = ['sarah','darlene']
     
