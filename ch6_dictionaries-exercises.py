@@ -24,7 +24,7 @@ for people, places in favorite_places.items():
         print(f"\t{place.title()}")
 
 
-# Ex- Dictionaries in dictionaries
+# Ex- Dictionaries in a dictionary
 cities = {
     
     "philadelphia": {
@@ -49,6 +49,7 @@ for city, city_info in cities.items():
     country = city_info["country"]
     population = city_info["population"]
     fact = city_info["fact"]
+    
     print(f"\tCountry: {country.title()}")
     print(f"\tPopulation: {population}")
     print(f"\tFact: {fact}")
