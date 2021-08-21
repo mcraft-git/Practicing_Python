@@ -14,6 +14,7 @@ while polling_active:
     anime = anime.lower()
 
     # Save each input response as a dictionary key(name) + value(anime)
+    # (Will overwrite if input keys are equal)
     responses[name] = anime
 
     repeat = input("\nThank you. Is there anyone else who needs to answer? (yes/no)\n")
