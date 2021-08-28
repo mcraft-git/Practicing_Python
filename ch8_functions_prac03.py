@@ -37,11 +37,13 @@ elif mname:
     profile = build_person(fname,lname,mname)
 
 # Due to the order of positional arguments,
-# we must pass a "None" value for 'mname' under this condition.
+# we must pass a "None" value for 'mname' under this condition...
+# (even though the function parameter has a default value of "None").
 elif age:
     profile = build_person(fname,lname,None,age)
 
 else:
     profile = build_person(fname,lname)
 
+# Prints the profile as an unformatted dictionary.
 print(f"Thanks! Here's your profile:\n{profile}")
