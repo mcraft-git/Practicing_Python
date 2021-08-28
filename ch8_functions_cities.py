@@ -2,6 +2,7 @@
 # This function uses a default value for the 'state' parameter.
 def give_captial(city, state='NJ'):
     """Gives the capital city and state."""
+    
     capital = "Trenton"
     if state == 'NJ':
         print(f"The capital of {state} is {capital}.")

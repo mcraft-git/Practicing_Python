@@ -10,3 +10,5 @@ describe_pet('ichi')
 
 # Keyword arguments can be used in any order.
 describe_pet(animal_type = 'dog', animal_name = 'annie')
+
+help(describe_pet)

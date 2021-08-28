@@ -1,6 +1,6 @@
 
 # Functions start with the keyword 'def'
-# This functino is defined with the parameter 'username'
+# This function is defined with the parameter 'username'
 def greet_user(username):
     """This is a docstring.
         Docstrings should explain what a function does."""
