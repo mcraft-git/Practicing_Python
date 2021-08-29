@@ -19,9 +19,12 @@ def toy_parts(**toytype):
 
     if toytype == 1:
        parts['fur'] = input("What kind of fur does the Teddy Bear have?"
-        "\nOptions:\n\tsoft\n\tshaggy\t\npatchy\n")
-        parts['style'] = input("What's the Teddy Bear's style?"
-        )
+        "\nOptions:\n\tsoft black\n\tshaggy brown\t\npolar\n>")
+       parts['style'] = input("What's the Teddy Bear holding?"
+        "\nOptions:\n\ta bee hive\n\ta fish\t\na honey jar\n>")
+       parts['style'] = input("What does the Teddy Bear wear?"
+       "(leave blank for a plain 'ol bear)"
+        "\nOptions:\n\ta raincoat\n\ta bumblebee costume\n>")
 
 
 
