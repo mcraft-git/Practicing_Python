@@ -6,15 +6,23 @@
 # Notice the double asterisk before the "parts" parameter,
 # which indicates an arbitrary number of Keyword Arguments
 # may be passed to the function as 'key=value' pairs.
-def toy_specifications(type,name,**parts):
+def toy_specifications(toytype,toyname,**toyparts):
     """Builds profile of desired toy. Prints build status."""
 
 
 
-def toy_parts(type):
+def toy_parts(**toytype):
     """Prints questionaire to obtain inputs.
         Compiles list of desired parts."""
-chosen_type = type
+
+    parts = {}
+
+    if toytype == 1:
+       parts['fur'] = input("What kind of fur does the Teddy Bear have?"
+        "\nOptions:\n\tsoft\n\tshaggy\t\npatchy\n")
+        parts['style'] = input("What's the Teddy Bear's style?"
+        )
+
 
 
 def toy_complete(spec):

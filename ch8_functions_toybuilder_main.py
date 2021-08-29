@@ -1,8 +1,9 @@
 
 # Let's use functions to make a toybuilder program!
 
-# When importing, shorten the name to make calls easier.
-import functions_toybuilder_module as tm
+# When importing, shorten the module name
+# with 'as' to make calls easier.
+import ch8_functions_toybuilder_module as tm
 
 print("A new toy is waiting to be born and be your new best friend!\n")
 print("But it needs your help figuring out what sort of toy it will be...\n")
