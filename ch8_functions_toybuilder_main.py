@@ -1,5 +1,5 @@
 
-# Let's use functions to make a toybuilder program!
+# Let's use functions to make a program that builds toys!
 
 # When importing, shorten the module name
 # with 'as' to make calls easier.
@@ -35,10 +35,10 @@ toy_parts_fin = tm.toy_parts(toy_type)
 toy_name = input("\nWhat is its name?\n>")
 
 # The final line passes the Positional Arguments 'toy_type' and 'toy_name'
-# To the 'toy_specifications' function defined in the module file
+# to the 'toy_specifications' function defined in the module file
+
 # The Arbitrary Keyword Argument 'toy_parts_fin' is passed last...
 # ...Arbitrary arguments have asterisks and must always be passed
 # AFTER "non-arbitrary" Positional and Keyword Arguments
 # (1 asterisk = tuple | 2 asterisks = dictionary)
 tm.toy_specifications(toy_type,toy_name,**toy_parts_fin)
-
