@@ -16,6 +16,9 @@ def toy_parts(toytype):
        parts['outfit'] = input("\nWhat does your Teddy Bear wear?"
        " (leave blank for a plain 'ol bear)"
         "\nOptions:\n\traincoat\n\tbumblebee costume\n>")
+       # This statement deletes the 'outfit' key if input is blank
+       if parts ['outfit'] == "":
+           del parts['outfit']
     
     if toytype == "Dress-up Dolly":
        parts['skin'] = input("\nWhat skin tone does your Dress-up Dolly have?"
@@ -25,6 +28,9 @@ def toy_parts(toytype):
        parts['outfit'] = input("\nWhat is your Dress-up Dolly wearing?"
        "(leave blank for a simple white dress)"
         "\nOptions:\n\tyellow springwear\n\tblue swimsuit\n\tred ballgown\n>")
+       if parts['outfit'] == "":
+            del parts['outfit']
+
 
     if toytype == "Rowdy Robot":
        parts['base'] = input("\nHow does your Rowdy Robot move around?"
