@@ -3,30 +3,46 @@
 # The main file of a program will import functions from modules.
 
 
+def toy_parts(toytype):
+    """Prints questionaire to obtain inputs.
+        Compiles list of desired parts."""
+
+    parts = {}
+
+    if toytype == "Teddy Bear":
+       parts['fur'] = input("\nWhat kind of fur does your Teddy Bear have?"
+        "\nOptions:\n\tsoft black\n\tshaggy brown\n\tpolar\n>")
+       parts['held'] = input("\nWhat's your Teddy Bear holding?"
+        "\nOptions:\n\tbee hive\n\tfish\n\thoney jar\n>")
+       parts['outfit'] = input("\nWhat does your Teddy Bear wear?"
+       " (leave blank for a plain 'ol bear)"
+        "\nOptions:\n\traincoat\n\tbumblebee costume\n>")
+    
+    if toytype == "Dress-up Dolly":
+       parts['skin'] = input("\nWhat skin tone does your Dress-up Dolly have?"
+        "\nOptions:\n\tdark\n\tmedium\n\tlight\n>")
+       parts['hair'] = input("\nWhat kind of hair does your Dress-up Dolly have?"
+        "\nOptions:\n\tpoofy black\n\tcurly brunette\n\tstraight blonde\n>")
+       parts['outfit'] = input("\nWhat is your Dress-up Dolly wearing?"
+       "(leave blank for a simple white dress)"
+        "\nOptions:\n\tyellow springwear\n\tblue swimsuit\n\tred ballgown\n>")
+
+    if toytype == "Rowdy Robot":
+       parts['base'] = input("\nHow does your Rowdy Robot move around?"
+        "\nOptions:\n\ttank treads\n\tbionic legs\n\thovercraft\n>")
+       parts['arms'] = input("\nWhat does your Rowdy Robot have for arms?"
+        "\nOptions:\n\tspring-loaded fists\n\tmagnetic drills\n\tdouble lasers\n>")
+       parts['head'] = input("\nWhat sits on top of your Rowdy Robot's frame?"
+        "\nOptions:\n\ttalking head\n\tsuper-brain tank\n\tsonic siren\n>")
+
+    return parts 
+
+
 # Notice the double asterisk before the "parts" parameter,
 # which indicates an arbitrary number of Keyword Arguments
 # may be passed to the function as 'key=value' pairs.
 def toy_specifications(toytype,toyname,**toyparts):
     """Builds profile of desired toy. Prints build status."""
 
-
-
-def toy_parts(**toytype):
-    """Prints questionaire to obtain inputs.
-        Compiles list of desired parts."""
-
-    parts = {}
-
-    if toytype == 1:
-       parts['fur'] = input("What kind of fur does the Teddy Bear have?"
-        "\nOptions:\n\tsoft black\n\tshaggy brown\t\npolar\n>")
-       parts['style'] = input("What's the Teddy Bear holding?"
-        "\nOptions:\n\ta bee hive\n\ta fish\t\na honey jar\n>")
-       parts['style'] = input("What does the Teddy Bear wear?"
-       "(leave blank for a plain 'ol bear)"
-        "\nOptions:\n\ta raincoat\n\ta bumblebee costume\n>")
-
-
-
-def toy_complete(spec):
-    """Prints completed toy profile."""
+    print(f"\nORDER PLACED! We are building your toy! (see details below)\nToy type: {toytype}\nToy name: {toyname}\nSelected features:\n"
+    f"\t{toyparts}")
