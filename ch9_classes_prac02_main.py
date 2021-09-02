@@ -12,13 +12,10 @@ password = input ("Enter a password: ")
 
 user1 = m.User(username,joined,password)
 
-print(f"Here are your details:\n"
-"\tusername: {user1.username}\n"
-"\tjoined: {user1.joined}\n"
-"\tpassword: {user1.password}")
+user1.display_user()
 
 print("You will now need to login to access the boards."
 "This may seem silly, but humor us.")
 password = input("Please re-enter your password: ")
 
-user1.m.login(password)
+user1.login(password)

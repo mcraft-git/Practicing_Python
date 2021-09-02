@@ -13,6 +13,15 @@ class User:
         self.account_lock = False
     
 
+    def display_user(self):
+        """Displays user details during account creation."""
+
+        print("Here are your details:\n"
+        "\tusername: {self.username}\n"
+        "\tjoined: {self.joined}\n"
+        "\tpassword: {self.password}")
+
+
     def login(self, password):
         """Checks input user password."""
 
@@ -53,4 +62,6 @@ class User:
         else:
             print("zhjsbcfjkfdc\n"
             "Hah!\nOkay, you got us. Failing the reset is pretty funny.")
+    
+
 
