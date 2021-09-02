@@ -12,6 +12,7 @@ class User:
         self.login_attempts_counter = 0
         self.account_lock = False
     
+
     def login(self, password):
         """Checks input user password."""
 
@@ -30,19 +31,26 @@ class User:
             
             if self.login_attempts_counter < 3:
                 self.login_attempts_counter =+ 1
+                password = input("Try again bruh: ")
+                if password == self.password:
+                    self.login(password)
+                    break
+                else:
+                    continue
             else:
                 self.account_lock == True
                 print(f"This account has been locked due to failed logins."
                 "You probably weren't that funny anyway.")
     
+
     def login_reset(self,password):
         """Resets user account login."""
 
-        if password == "hilarious admin":
+        if password == "hysterical admin":
             self.account_lock == False
             print(f"{self.username}'s account has been unlocked. Sweet redemption is yours!"
             "(Don't screw this up.)")
         else:
             print("zhjsbcfjkfdc\n"
-            "Okay, you got us. Failing the reset is pretty funny.")
+            "Hah!\nOkay, you got us. Failing the reset is pretty funny.")
 
