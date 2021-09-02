@@ -62,11 +62,12 @@ class User:
                 password = input("Try again bruh: ")
     
                 if password == self.password:
+                    self.login_attempts_counter = 0
                     self.login(password)
                     break
 
             else:
-                self.account_lock == True
+                self.account_lock = True
                 print(f"This account has been locked due to failed logins."
                 " You probably weren't that funny anyway.")
                 self.login_reset_prompt()
@@ -84,7 +85,7 @@ class User:
         """Resets user account login."""
 
         if password == "hysterical admin":
-            self.account_lock == False
+            self.account_lock = False
             print(f"{self.username}'s account has been unlocked. Sweet redemption is yours!"
             " (Don't screw this up.)")
             self.login_prompt()
