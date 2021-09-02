@@ -16,10 +16,10 @@ class User:
     def display_user(self):
         """Displays user details during account creation."""
 
-        print("Here are your details:\n"
-        "\tusername: {self.username}\n"
-        "\tjoined: {self.joined}\n"
-        "\tpassword: {self.password}")
+        print(f"Here are your details:\n"
+        f"\tusername: {self.username}\n"
+        f"\tjoined: {self.joined}\n"
+        f"\tpassword: {self.password}")
 
 
     def login(self, password):
