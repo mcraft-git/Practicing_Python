@@ -39,12 +39,17 @@ class Cat:
 
 # Creating an instance of the 'Cat' class,
 # and passing arguments for the attributes.
-my_cat = Cat('Ichi',10)
+cat1 = Cat('Ichi',10)
 
-print(f"My cat's name is {my_cat.name}. He is {my_cat.age} years old.")
+print(f"My cat's name is {cat1.name}. He is {cat1.age} years old (middle-aged in cat years).")
+
+# We can create as many instances of a class as we need.
+cat2 = Cat('Ryuko',1)
+
+print(f"Sabrina's cat's name is {cat2.name}. At just {cat2.age} year old, she is still a kitten!")
 
 # Calling class methods.
 # Notice that 'self' is not passed as an argument.
-my_cat.nap()
-my_cat.meow()
-my_cat.swipe("foot")
+cat1.nap()
+cat1.meow()
+cat2.swipe("foot")
