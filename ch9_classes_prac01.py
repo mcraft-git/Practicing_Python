@@ -6,8 +6,9 @@ class Cat:
     """Builds simulated cat models."""
 
     # A function that is part of a class is called a Method.
+    # To create an Instance of a class, '__init__' is required.
     # The '__init__' method is already baked into Python...
-    # ...it runs automatically whenever we create a class.
+    # ...it runs automatically whenever we create a class (once we define it).
     def __init__(self, name, age):
         """Initializes name and age attributes."""
 
