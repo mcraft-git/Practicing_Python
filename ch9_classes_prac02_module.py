@@ -49,6 +49,7 @@ class User:
 
     # This method modifies both the counter and the flag
     # if the user continues to enter incorrect passwords.
+    # The counter is modified to 0 if password is correct.
     def login_attempts(self):
         """
         Increments login attempts.
