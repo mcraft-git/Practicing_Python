@@ -1,13 +1,18 @@
 
+"""
+Module file for the 'User' class.
+This class builds user profiles for a web forum.
+"""
+
 # Now let's practice modifying a class's attributes.
 class User:
-    """Builds user profiles for a web forum."""
+    """Builds profile instances."""
 
     # The attributes that may be modified are:
     # 'login_attempts_counter' (counter) and 'account_lock' (boolean flag).
     # The methods modifying these attributes simulate a user login policy.
     def __init__(self, username, joined, password):
-        """Instantiates user profiles."""
+        """Instantiates individual profiles."""
 
         self.username = username
         self.joined = joined
