@@ -12,17 +12,18 @@ class Admin(User):
         """Instantiates individual admin profiles."""
         
         # The 'super()' function can call a method from the parent class.
-        # By calling __init__ we give the Admin instance all the parent attributes.
+        # By calling '__init__' we give the Admin instance all the parent attributes.
         super().__init__(username,joined,password)
 
-        # This attribute name matches an attribute of the parent,
-        # therefore the child attribute will override the parent's.
+        # This attribute name matches an attribute name from the parent,
+        # hence the child attribute overrides the parent's.
         self.privileges = ["can ban user","can un-ban user","can unlock account",
         "can add posts","can delete posts"]
         
         self.admin_user = True
 
+    # Defining a method that matches the name of a parent method overrides the parent.
     def show_privileges(self):
         """Displays list of privileges."""
 
-        print(f"\nHere's what you can do on the Funny Forum...\n{self.privileges}")
+        print(f"\nAdmins, here's what you can do on the Funny Forum...\n{self.privileges}")
