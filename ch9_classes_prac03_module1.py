@@ -14,7 +14,7 @@ class User:
         self.account_lock = False
         self.privileges = ["can add post"]
         self.admin_user = False
-        self.store_profile(self.username,self.joined,self.password)
+        self.user_list = self.store_profile(self.username,self.joined,self.password)
 
     
     def show_privileges(self):
@@ -35,9 +35,11 @@ class User:
     def store_profile(self,username,joined,password):
         """Stores user profiles."""
 
-        user_list = []
-        new_user = {'user':username,'join':joined,'pw':password}
-        user_list.append(new_user)
+        user_list = {}
+        user_list['user'] = username
+        user_list['join'] = joined
+        user_list['pw'] = password
+        return user_list
 
 
 class Login:
@@ -57,20 +59,23 @@ class Login:
         " This may seem silly, but humor us.")
         username = input("Please enter your username: ")
         password = input("Please enter your password: ")
-        self.login(username,password)
+        Login.login(self,username,password)
 
 
-    def login(self, username,password):
+    def login(self,username,password):
         """Checks input user password."""
 
-        for user in User.user_list:
-
-            if username == user('user') and password == user('pw'):
-                print(f"\nWelcome, {username}!"
-                " You have access to the Funny Forum. Don't be a Karen.\n")
-                mod3.user_type_prompt()
-            else:
-                self.login_attempts()
+        userlist = self.user_list
+        un = username
+        pw = password
+        u = userlist.get('user')
+        p = userlist.get('pw')
+        if un == u and pw == p:
+            print(f"\nWelcome, {un}!"
+            " You have access to the Funny Forum. Don't be a Karen.\n")
+            mod3.user_type_prompt()
+        else:
+            Login.login_attempts(self)
 
 
     def login_attempts(self):
@@ -79,6 +84,8 @@ class Login:
         Locks account after three failed attempts.
         """
 
+        userlist = self.user_list
+
         while self.account_lock == False:
             
             if self.login_attempts_counter < 3:
@@ -86,31 +93,30 @@ class Login:
                 print("Try again bruh...\n")
                 username = input("Please enter your username: ")
                 password = input("Please enter your password: ")
-    
-            for user in User.user_list:
-
-                if username == user('user') and password == user('pw'):
+                u = userlist.get('user')
+                p = userlist.get('pw')
+                if username == u and password == p:
+                    self.login_attempts_counter = 0
                     print(f"\nWelcome, {username}!"
                     " You have access to the Funny Forum. Don't be a Karen.\n")
                     mod3.user_type_prompt()
 
-                else:
-                    self.account_lock = True
-                    print(f"This account has been locked due to failed logins."
-                    " You probably weren't that funny anyway.")
+            else:
+                self.account_lock = True
+                print(f"This account has been locked due to failed logins."
+                " You probably weren't that funny anyway.")
                     
-                    if self.admin_user == True:
-                        self.login_reset_prompt()
-                        break
-                    else:
-                        break
+                if self.admin_user == True:
+                    Login.login_reset_prompt(self)
+                else:
+                    break
 
 
     def login_reset_prompt(self):
         """Prompt for admin reset password."""
 
         admin_pw = input(f"Admin:\nTo unlock, you know what to do: ")
-        self.login_reset(admin_pw)
+        Login.login_reset(self,admin_pw)
 
 
     def login_reset(self,password):
@@ -120,7 +126,7 @@ class Login:
             self.account_lock = False
             print(f"{self.username}'s account has been unlocked. Sweet redemption is yours!"
             " (Don't screw this up.)")
-            self.login_prompt()
+            Login.login_prompt(self)
         else:
             print("zhjsbcfjkfdc\n"
             "Okay, you got us. Failing the reset is pretty funny.")

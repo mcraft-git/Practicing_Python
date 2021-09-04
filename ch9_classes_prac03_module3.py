@@ -17,11 +17,14 @@ def create_account():
 
         admin = mod2.Admin(username, joined, password)
         admin.show_privileges()
+        mod1.Login.login_prompt(admin)
 
     else:
 
         pleb = mod1.User(username,joined,password)
         pleb.show_privileges()
+        mod1.Login.login_prompt(pleb)
+
 
 def user_type_prompt():
     """Checks whether user is new."""
@@ -30,6 +33,8 @@ def user_type_prompt():
     if user_type == "y":
         create_account()
     elif user_type == "n":
-        mod1.Login.login_prompt()
+        print("Okay, we're done here.")
+        SystemExit
     else:
-        print("Sorry, we don't serve liminals here.")
+        print("Sorry, we don't serve liminals.")
+        SystemExit
