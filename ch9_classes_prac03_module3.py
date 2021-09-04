@@ -21,7 +21,7 @@ def create_account():
         # "Admin" class is called (see module2) and passed input args,
         # then the instance is copied to variable 'admin'.
         # Method 'show_privileges' is called from class instance,
-        # (displays privleges to user).
+        # (displays privileges to user).
         # Login class (see module1) is called and passed 'admin' instance.
         admin = mod2.Admin(username, joined, password)
         admin.show_privileges()
