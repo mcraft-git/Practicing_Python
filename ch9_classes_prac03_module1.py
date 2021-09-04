@@ -1,5 +1,4 @@
 
-from ch9_classes_prac03_module2 import Admin
 import ch9_classes_prac03_module3 as mod3
 
 class User:
