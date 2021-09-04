@@ -48,9 +48,6 @@ class Login:
     Locks user account if attempt threshold reached.
     """
 
-    def __init__(self):
-        """Instantiates login attempt."""
-
 
     def login_prompt(self):
         """Prompts for user password."""

@@ -34,7 +34,7 @@ def user_type_prompt():
         create_account()
     elif user_type == "n":
         print("Okay, we're done here.")
-        SystemExit
+        quit()
     else:
         print("Sorry, we don't serve liminals.")
-        SystemExit
+        quit()
