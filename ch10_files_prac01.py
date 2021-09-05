@@ -23,8 +23,14 @@ with open('Crash_Course_2/hello_binary.txt') as file_object:
 file_path = 'C:\\Users\\craft\\00_codez\\Python\\Crash_Course\\Crash_Course_2\\buncha_lines.txt'
 
 with open(file_path) as file_object:
+
+    # To work a file's contents outside of the 'with' block,
+    # we can use the 'readlines()' method
+    # and assign the created list to a variable ("lines").
+    lines = file_object.readlines()
+
     # We can use a loop to parse each line,
     # which is great for searching a file.
-    for line in file_object:
-        # Don't forget to strip!
-        print(line.rstrip())
+for line in lines:
+    # Don't forget to strip!
+    print(line.rstrip())
