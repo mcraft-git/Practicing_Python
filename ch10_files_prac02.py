@@ -7,7 +7,7 @@ all_accounted = False
 while all_accounted == False:
 
     participant = input("Time for another mandatory poll! Please enter your name: ")
-    participants.append(participant)
+    participants.append(participant.title())
 
     new_user_chk = input("Next in line?(y/n): ")
     if new_user_chk.lower() == "n":
@@ -23,7 +23,8 @@ with open('pet_poll_answers','w') as file_object:
     file_object.write("TOTALLY LEGIT POLL RESULTS\n")
 
 for participant in participants:
-    animal_type = input(f"{participant}, what's the best type of animal to have as a pet - dog or cat?\n")
+    animal_type = input(f"{participant}, which would you prefer to have as a pet - dog or cat?\n")
+    animal_type = animal_type.lower()
 
     # The 'replace()' method replaces its 1st argument with the 2nd.
     # Remember: strings in Python are immutable,
@@ -33,7 +34,7 @@ for participant in participants:
     # When we pass 'a' as the 2nd argument to open(),
     # Python appends the string to the file.
     with open('pet_poll_answers.txt', 'a') as file_object:
-        file_object.write(f"{participant}: {animal_type}\n")
+        file_object.write(f"{participant}: {animal_type.title()}\n")
 
 print("\nThank you for involuntarily participating. Now, lets have those results!\n")
 
