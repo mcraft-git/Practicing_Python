@@ -32,5 +32,34 @@ with open(file_path) as file_object:
     # We can use a loop to parse each line,
     # which is great for searching a file.
 for line in lines:
-    # Don't forget to strip!
+
+    # Don't forget to rstrip!
     print(line.rstrip())
+
+# Let's output an edited version of the pi file.
+filename = 'pi_digits.txt'
+
+with open(filename) as file_object:
+    # We've overwritten the previous example here. 
+    lines = file_object.readlines()
+
+# Create an empty string to store the lines...
+pi_string = ''
+
+# ...then append each line after using 'strip()' to remove whitespace.
+for line in lines:
+    pi_string += line.strip()
+
+print(pi_string)
+
+# If we wanted to print less numbers we could throw in a slice.
+print(f"{pi_string[:4]}...")
+
+# Find out how long a string is by wrapping
+# the 'len()' method around a string object.
+print(len(pi_string))
+
+# We can search a string's contents easily with an IF statement.
+bday_chk = input("Enter your birthday (ddmm): ")
+if bday_chk in pi_string:
+    print(f"Jeepers! Your birthday ({bday_chk}) is in the first 31 digits of Pi!")
