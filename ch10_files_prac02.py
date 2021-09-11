@@ -19,7 +19,7 @@ print(participants)
 # When we pass 'w' to open() as the 2nd argument
 # the file passed as the 1st argument is overwritten (so BE CAREFULL).
 # If there is no file with the given name, Python creates one (include extension).
-with open('pet_poll_answers','w') as file_object:
+with open('pet_poll_answers.txt','w') as file_object:
     file_object.write("TOTALLY LEGIT POLL RESULTS\n")
 
 for participant in participants:
