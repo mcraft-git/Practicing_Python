@@ -73,6 +73,6 @@ class BookParser():
 
         with open(self.book, encoding='utf-8') as f:
             contents = f.read()
-            her = contents.count('her')
+            her = contents.count(' her ')
             self.herstory = her
             print(f"{self.title} has approx. {self.herstory} occurences of the word 'her'.")        
