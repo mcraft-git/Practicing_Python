@@ -20,6 +20,7 @@ print(participants)
 # the file passed as the 1st argument is overwritten (so BE CAREFULL).
 # If there is no file with the given name, Python creates one (include extension).
 with open('pet_poll_answers.txt','w') as file_object:
+    # The write() function does not automatically insert newlines
     file_object.write("TOTALLY LEGIT POLL RESULTS\n")
 
 for participant in participants:
@@ -33,6 +34,7 @@ for participant in participants:
 
     # When we pass 'a' as the 2nd argument to open(),
     # Python appends the string to the file.
+    # With 'a', the file contents are not erased (unlike the 'w' argument).
     with open('pet_poll_answers.txt', 'a') as file_object:
         file_object.write(f"{participant}: {animal_type.title()}\n")
 
@@ -49,4 +51,3 @@ print(contents.rstrip())
 
 print(f"\nWould you look at that?? This impartial poll has provided an un-biased,"
 f"completely coincidental consensus! All {lines} of you prefer cats!")
-

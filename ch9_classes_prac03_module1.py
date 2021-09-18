@@ -75,7 +75,6 @@ class Login:
 
         # In order to '.get' from our dictionary attribute,
         # we must first copy it to a variable in the method definition.
-        # (I'm not sure why this is required... but I'm a n00b!)
         userlist = self.user_list
         while self.account_lock == False:
             

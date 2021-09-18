@@ -20,7 +20,8 @@ with open('Crash_Course_2/hello_binary.txt') as file_object:
 # This is because a single backslash is used to escape characters.
 
 # Saving a path as a variable is common practice.
-file_path = 'C:\\Users\\craft\\00_codez\\Python\\Crash_Course\\Crash_Course_2\\buncha_lines.txt'
+# full_file_path = 'C:\\This\\is\\where\\the\\path\\goes\\buncha_lines.txt'
+file_path = 'Crash_Course_2\\buncha_lines.txt'
 
 with open(file_path) as file_object:
 
@@ -36,7 +37,7 @@ for line in lines:
     # Don't forget to rstrip!
     print(line.rstrip())
 
-# Let's output an edited version of the pi file.
+# Let's print() an edited version of the contents of pi_digits.txt.
 filename = 'pi_digits.txt'
 
 with open(filename) as file_object:
