@@ -1,7 +1,7 @@
 
 # Let's practice with files and exceptions.
 # We've saved our functions in the next module,
-# so let's import them alogn with the 'random' library.
+# so let's import them along with the 'random' library.
 import random
 from ch10_exceptions_prac02_module import BookParser as BP
 
