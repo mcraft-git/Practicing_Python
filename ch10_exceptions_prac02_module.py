@@ -84,7 +84,7 @@ class BookParser():
         with open(self.book, encoding='utf-8') as f:
             contents = f.read()
             # Without the space characters on either side of the word "her",
-            # count() would include any word containing those three letters,
+            # count() would include any word containing those three consecutive letters,
             # such as "there" or "where".
             her = contents.count(' her ')
             self.herstory = her
