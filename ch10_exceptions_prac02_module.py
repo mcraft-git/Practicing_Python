@@ -49,8 +49,15 @@ class BookParser():
         """Counts approx. total words in book."""
         
         with open(self.book, encoding='utf-8') as f:
+            # The 'read()' method returns a specified number of bytes from the file
+            # (with the default being '-1', or the full file),
+            # and copies them to our variable "contents".
             contents = f.read()
+            # The 'split()' method separates a string into parts whereever it finds a space,
+            # then stores all of those parts in a list, and copies that list to "words".
             words = contents.split()
+            # The len() method counts the list items, and we save this number to 'self.words'.
+            # In this way we have an approximation of how many words are written in the text.
             self.words = len(words)
             print(f"{self.title} has approx. {self.words} words.")
  
@@ -62,6 +69,9 @@ class BookParser():
 
         with open(self.book, encoding='utf-8') as f:
             contents = f.read()
+            # The 'count()' method iterates over the file, counting all 
+            # occurences of the argument that is passed to it.
+            # Here we look for the number of newlines in the file.
             lines = contents.count('\n')
             self.lines = lines
             print(f"{self.title} has approx. {self.lines} lines.")
@@ -73,6 +83,9 @@ class BookParser():
 
         with open(self.book, encoding='utf-8') as f:
             contents = f.read()
+            # Without the space characters on either side of the word "her",
+            # count() would include any word containing those three letters,
+            # such as "there" or "where".
             her = contents.count(' her ')
             self.herstory = her
-            print(f"{self.title} has approx. {self.herstory} occurences of the word 'her'.")        
+            print(f"{self.title} has {self.herstory} occurences of the word 'her'.")        
