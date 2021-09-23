@@ -18,7 +18,7 @@ def create_new_username():
         'name':new_username,
         }
     
-    # The 'json.dumps()' method converts a string into a JSON object.
+    # The 'json.dumps()' method converts a Python object into a JSON string.
     # (The 's' stands for 'string')
     # We can specify the indent, and print it for viewing if we like.
     json_obj = json.dumps(usr_dict, indent = 4)
