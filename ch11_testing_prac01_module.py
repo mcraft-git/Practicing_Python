@@ -1,6 +1,4 @@
 
-
-
 def get_fn_input():
     """Obtains user input for the first name."""
 
