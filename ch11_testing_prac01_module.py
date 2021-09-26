@@ -6,7 +6,6 @@ def get_fn_input():
     return in_fn
 
 
-
 def get_ln_input():
     """Obtains user input for the last name."""
 
