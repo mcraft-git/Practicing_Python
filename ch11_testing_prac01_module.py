@@ -12,9 +12,6 @@ def get_ln_input():
 
     in_ln = input("Please enter a last name: ")
     return in_ln
-
-
-
  
 
 def get_formatted_name(first_name,last_name):
