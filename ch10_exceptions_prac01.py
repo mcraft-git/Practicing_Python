@@ -17,9 +17,9 @@ questions = True
 
 while questions:
 
-    print("\nUhhh... human pick one o' these here:\n")
+    print("\nUhhh... human pick one o' these:\n")
 
-    operator_type_raw = input("1. Add\n2. Subtract\n3. Multiply\n4. Divide\n'q' = Quit\n")
+    operator_type_raw = input("\t1. Add\n\t2. Subtract\n\t3. Multiply\n\t4. Divide\n\t'q' = Quit\n>")
 
     if operator_type_raw is not 'q':
 
@@ -35,12 +35,12 @@ while questions:
                     
                 # More inputs means another try block...
                 try:
-                    first_int_raw = input("\nWhat human's first number?\n")
+                    first_int_raw = input("\nWhat human's first number?\n>")
                     first_int = int(first_int_raw)
-                    second_int_raw = input("\nWhat human's after-first number?\n")
+                    second_int_raw = input("\nWhat human's after-first number?\n>")
                     second_int = int(second_int_raw)
                 except ValueError:
-                    print("HAH! Dummy human use letters.")
+                    print("HAH! Dummy human use letters. Have to start over!")
                 else:            
                     answer = first_int + second_int
                     print(f"\nAnswer is: {answer}")
@@ -57,16 +57,16 @@ while questions:
             elif operator_type == 2:
 
                 try:
-                    first_int_raw = input("\nWhat human's first number?\n")
+                    first_int_raw = input("\nWhat human's first number?\n>")
                     first_int = int(first_int_raw)
-                    second_int_raw = input("\nWhat human's after-first number?\n")
+                    second_int_raw = input("\nWhat human's after-first number?\n>")
                     second_int = int(second_int_raw)
                 except ValueError:
-                    print("HAH! Dummy human use letters.")
+                    print("HAH! Dummy human use letters. Have to start over!")
                 else:            
                     answer = first_int - second_int
                     print(f"\nAnswer is: {answer}")
-                    more_questions = input("Human got more silly questions?! (y/n): ")
+                    more_questions = input("Human got more silly questions? (y/n): ")
                     if more_questions == "y":
                         break
                     else:
@@ -76,16 +76,16 @@ while questions:
             elif operator_type == 3:
 
                 try:
-                    first_int_raw = input("\nWhat human's first number?\n")
+                    first_int_raw = input("\nWhat human's first number?\n>")
                     first_int = int(first_int_raw)
-                    second_int_raw = input("\nWhat human's after-first number?\n")
+                    second_int_raw = input("\nWhat human's after-first number?\n>")
                     second_int = int(second_int_raw)
                 except ValueError:
-                    print("HAH! Dummy human use letters.")
+                    print("HAH! Dummy human use letters. Have to start over!")
                 else:            
                     answer = first_int * second_int
                     print(f"\nAnswer is: {answer}")
-                    more_questions = input("Human got more silly questions?! (y/n): ")
+                    more_questions = input("Human got more silly questions? (y/n): ")
                     if more_questions == "y":
                         break
                     else:
@@ -95,12 +95,12 @@ while questions:
             elif operator_type == 4:
 
                 try:
-                    first_int_raw = input("\nWhat human's first number?\n")
+                    first_int_raw = input("\nWhat human's first number?\n>")
                     first_int = int(first_int_raw)
-                    second_int_raw = input("\nWhat human's after-first number?\n")
+                    second_int_raw = input("\nWhat human's after-first number?\n>")
                     second_int = int(second_int_raw)
                 except ValueError:
-                    print("HAH! Dummy human use letters.")
+                    print("HAH! Dummy human use letters. Have to start over!")
                 else:
                     try:            
                         answer = first_int / second_int
@@ -109,7 +109,7 @@ while questions:
                         "Start over!!")
                     else:
                         print(f"\nAnswer is: {answer}")
-                        more_questions = input("Human got more silly questions?! (y/n): ")
+                        more_questions = input("Human got more silly questions? (y/n): ")
                         if more_questions == "y":
                             break
                         else:

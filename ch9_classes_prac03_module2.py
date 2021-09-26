@@ -15,11 +15,13 @@ class Admin(User):
         # By calling '__init__' we give the Admin instance all the parent attributes.
         super().__init__(username,joined,password)
 
-        # This attribute name matches an attribute name from the parent,
-        # hence the child attribute overrides the parent's.
+        # This name of this attribute ("self.privileges") matches an attribute name from the parent,
+        # and because it is defined in the child class after 'super().__init__()' is called,
+        # it therefore overrides the parent attribute definition.
         self.privileges = ["can ban user","can un-ban user","can unlock account",
         "can add posts","can delete posts"]
         
+        # This is another attribute override, setting our admin flag to True
         self.admin_user = True
 
     # Defining a method that matches the name of a parent method overrides the parent.
@@ -27,3 +29,4 @@ class Admin(User):
         """Displays list of privileges."""
 
         print(f"\nAdmins, here's what you can do on the Funny Forum...\n{self.privileges}")
+        

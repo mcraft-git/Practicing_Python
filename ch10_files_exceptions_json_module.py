@@ -11,8 +11,10 @@ def create_new_username():
     new_username = input("\nWhat will your username be?\n> ")
     new_username = new_username.lower()
     
-    # Since we want this program to store multiple names (as JSON),
-    # lets create a dictionary object to store the inputs.
+    # Since we want to store usernames in a JSON file, we can save user inputs
+    # as dictionaries to make them easier to manage ("usr_dict").
+    # And since we want this program to store multiple individual usernames (as JSON),
+    # we can create a list variable ("usr_dict_list") to store the dictionaries.
     usr_dict_list = []
     usr_dict = {
         'name':new_username,
@@ -34,7 +36,7 @@ def create_new_username():
             # If a json file exists, we'll load it with 'json.load()'
             # We can't use 'json.loads()' because we are saving these usernames
             # as json (list) objects, not just as a string.
-            # (Again, the 's' stands for 'string')
+            # (Again, the 's' in 'json.loads' stands for 'string')
             with open(username_file,'r') as f:
                 usr_dict_list = json.load(f)
             
@@ -43,7 +45,7 @@ def create_new_username():
 
             # Then we will write the list back to the file,
             # overwriting the old data with 'w' so that only the newly
-            # appended list is copied. 
+            # appended list is saved.
             with open(username_file, 'w') as f:
                 json.dump(usr_dict_list,f)
 
@@ -64,6 +66,7 @@ def create_new_username():
             quit()
 
     else:
+
         # Otherwise, if the user doesn't like the username displayed in json format
         # they can go back to try another one out.
         # (It was just an excuse to use 'json.dumps()' anyway...)
@@ -76,7 +79,7 @@ def find_old_username():
     old_user_check = input("Please enter your username: ")
     old_user_check = old_user_check.lower()
 
-    # We set try in case there's no file...
+    # We set 'try' in case there's no file...
     try:
 
             # ...then we will load the current list of users with 'json.load()'...

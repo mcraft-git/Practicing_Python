@@ -16,7 +16,8 @@ class User:
         self.account_lock = False
         self.admin_user = False
         self.privileges = ["can add post"]
-        # An attribute can call a method.
+
+        # An attribute can call a method defined in __init__().
         # (this dictionary is for demonstrative purposes, but is otherwise unnecessary)
         self.user_list = self.store_profile(self.username,self.joined,self.password)
 

@@ -25,6 +25,7 @@ class BookParser():
 
             with open(self.book, encoding='utf-8') as f:
                 contents = f.read()
+
         # This exception will print a message if the file isn't found.
         except FileNotFoundError:
             print(f"{self.book} is missing...")
@@ -49,14 +50,19 @@ class BookParser():
         """Counts approx. total words in book."""
         
         with open(self.book, encoding='utf-8') as f:
+
             # The 'read()' method returns a specified number of bytes from the file
             # (with the default being '-1', or the full file),
             # and copies them to our variable "contents".
             contents = f.read()
+            
             # The 'split()' method separates a string into parts whereever it finds a space,
-            # then stores all of those parts in a list, and copies that list to "words".
+            # then stores all of those parts in a list.
+            # Here, we use split(), then copy the created list to our "words" variable.
             words = contents.split()
-            # The len() method counts the list items, and we save this number to 'self.words'.
+            
+            # The len() method can be used to count list items.
+            # Here, we use len(), then save the integer total to the "self.words" attribute.
             # In this way we have an approximation of how many words are written in the text.
             self.words = len(words)
             print(f"{self.title} has approx. {self.words} words.")
@@ -69,9 +75,12 @@ class BookParser():
 
         with open(self.book, encoding='utf-8') as f:
             contents = f.read()
+ 
             # The 'count()' method iterates over the file, counting all 
             # occurences of the argument that is passed to it.
-            # Here we look for the number of newlines in the file.
+            # Here we look for the number of newlines in the file,
+            # thus saving an approximation of the number of lines in the text.
+            # We save this integer to the "self.lines" attribute.
             lines = contents.count('\n')
             self.lines = lines
             print(f"{self.title} has approx. {self.lines} lines.")
@@ -83,9 +92,11 @@ class BookParser():
 
         with open(self.book, encoding='utf-8') as f:
             contents = f.read()
+
             # Without the space characters on either side of the word "her",
             # count() would include any word containing those three consecutive letters,
             # such as "there" or "where".
+            # We save the count of the word 'her' to the attribute "self.herstory".
             her = contents.count(' her ')
             self.herstory = her
             print(f"{self.title} has {self.herstory} occurences of the word 'her'.")        
