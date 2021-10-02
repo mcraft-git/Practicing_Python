@@ -9,7 +9,7 @@ def get_fn_input():
 def get_mn_input():
     """Obtains user input for the middle name (optional)."""
 
-    in_mn = input("You may enter a middle name, or just press enter if you don't have one.")
+    in_mn = input("Please enter a middle name, or just press enter if you don't have one: ")
     if in_mn:
         return in_mn
     else:

@@ -10,9 +10,9 @@ while name_incomplete:
     ln = m.get_ln_input()
 
     if mn:
-        formatted_name = m.get_formatted_name(fn,ln)
+        formatted_name = m.get_formatted_name(fn,ln,mn)
     else:
-        formatted_name = m.get_formatted_name(fn,ln,)
+        formatted_name = m.get_formatted_name(fn,ln)
 
     if formatted_name:
         print(f"Here's the name:\n\t{formatted_name}")
