@@ -24,6 +24,15 @@ class NamesTestCase(unittest.TestCase):
         # received matches the result that was expected.
         self.assertEqual(formatted_name, "Georges St-Pierre")
 
+
+    # Here's a second test function to test inputs including middle names.
+    def test_first_middle_last_name(self):
+        """Do names like Monkey D. Luffy work?"""
+
+        formatted_name = get_formatted_name("Monkey","D.","Luffy")
+        self.assertEqual(formatted_name, "Monkey D. Luffy")
+
+
 # This if block is included to run the test file
 # if it is the main program.
 if __name__ == '__main__':

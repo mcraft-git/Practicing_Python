@@ -13,13 +13,24 @@ def get_ln_input():
     return in_ln
  
 
-def get_formatted_name(first_name,last_name):
+def get_formatted_name(first_name,last_name,middle_name =""):
     """Returns a formatted name."""
 
-    if first_name and last_name:
-        formatted_name = (f"{first_name} {last_name}")
-        formatted_name = formatted_name.title()
-        return formatted_name
+    if middle_name:
+
+        if first_name and last_name:
+            formatted_name = (f"{first_name} {middle_name} {last_name}")
+            formatted_name = formatted_name.title()
+            return formatted_name
+        else:
+            print("You must enter a first and last name.")
+            return None
     else:
-        print("You must enter a first and last name.")
-        return None
+
+        if first_name and last_name:
+            formatted_name = (f"{first_name} {last_name}")
+            formatted_name = formatted_name.title()
+            return formatted_name
+        else:
+            print("You must enter a first and last name.")
+            return None
