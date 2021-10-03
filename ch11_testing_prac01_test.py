@@ -29,7 +29,7 @@ class NamesTestCase(unittest.TestCase):
     def test_first_middle_last_name(self):
         """Do names like Monkey D. Luffy work?"""
 
-        formatted_name = get_formatted_name("Monkey","D.","Luffy")
+        formatted_name = get_formatted_name("Monkey","Luffy","D.")
         self.assertEqual(formatted_name, "Monkey D. Luffy")
 
 
