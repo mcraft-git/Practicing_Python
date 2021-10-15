@@ -61,7 +61,7 @@ t = str(t)
 t = t[:10]
 
 # Finally, we save our intended file path to a variable...
-file_path = (f'C:\\Users\\mcraft\\Downloads\\test\\{t}_list_compare.txt')
+file_path = (f'C:\\file\\path\\goes\\here\\{t}_list_compare.txt')
 
 # Then we write to the report file (or create one).
 with open(file_path, 'w') as file_object:
