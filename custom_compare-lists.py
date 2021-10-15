@@ -55,7 +55,7 @@ for d in diff:
 # New items sanity check.
 print(f"New items: {new_items}")
 
-# Adding a timestamp to the filename (optional)
+# OPTIONAL: Adding a date to the filename (need to verify leading zeroes for single digit day-mo.)
 t = datetime.now()
 t = str(t)
 t = t[:10]
