@@ -65,4 +65,4 @@ file_path = (f'C:\\file\\path\\goes\\here\\{t}_list_compare.txt')
 
 # Then we write to the report file (or create one).
 with open(file_path, 'w') as file_object:
-    file_object.write(f"MISSING FROM OLD LIST: {missing_old_fin}\nNEW LIST ITEMS: {new_items}")
+    file_object.write(f"_____COMPARE RESULTS_____\nMISSING FROM OLD LIST: {missing_old_fin}\nNEW LIST ITEMS: {new_items}")
