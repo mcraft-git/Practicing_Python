@@ -1,6 +1,6 @@
-
 import sys
 import pygame
+from pygame.constants import KEYUP
 from settings import Settings
 from shuttle import Shuttle
 
@@ -33,43 +33,29 @@ class DronesAttack:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
-
+                    
             # IF a keyboard key press is received...
             elif event.type == pygame.KEYDOWN:
-                self._check_keydown_events(event)
+                # IF the key is the RIGHT ARROW key...
+                if event.key == pygame.K_RIGHT:
+                    # Move the shuttle to the right.
+                    self.shuttle.moving_right = True
+                # IF the key is the LEFT ARROW key...
+                elif event.key == pygame.K_LEFT:
+                    # Move the shuttle to the left.
+                    self.shuttle.moving_left = True
 
             # IF a keyboard key release is received...
             elif event.type == pygame.KEYUP:
-                self._check_keyup_events(event)
+                # IF the key is the right arrow key...
+                if event.key == pygame.K_RIGHT:
+                    # Stop right-wise shuttle movement.
+                    self.shuttle.moving_right = False
+                # IF the key is the left arrow key...
+                elif event.key == pygame.K_LEFT:
+                    # Stop left-wise shuttle movement.
+                    self.shuttle.moving_left = False
 
-
-    def _check_keydown_events(self,event):
-        """Respond to key presses."""
-
-        # IF the key is the RIGHT ARROW key...
-        if event.key == pygame.K_RIGHT:
-            # Move the shuttle to the right.
-            self.shuttle.moving_right = True
-        # IF the key is the LEFT ARROW key...
-        elif event.key == pygame.K_LEFT:
-            # Move the shuttle to the left.
-            self.shuttle.moving_left = True
-        
-        # If the 'q' key is pressed, exit game.
-        elif event.key == pygame.K_q:
-            sys.exit()
-
-    def _check_keyup_events(self,event):
-        """Respond to key releases."""
-
-        # IF the key is the right arrow key...
-        if event.key == pygame.K_RIGHT:
-            # Stop right-wise shuttle movement.
-            self.shuttle.moving_right = False
-        # IF the key is the left arrow key...
-        elif event.key == pygame.K_LEFT:
-            # Stop left-wise shuttle movement.
-            self.shuttle.moving_left = False
 
 
     def _update_screen(self):
