@@ -12,7 +12,9 @@ class Shuttle:
         self.screen_rect = da_game.screen.get_rect()
 
         # Load the shuttle image and get its rect.
-        self.image = pygame.image.load('images\\troop_shuttle_fin.bmp')
+        # The 'convert()' method works on the pixel format,
+        # and improves blit processing speed.
+        self.image = pygame.image.load('images/troop_shuttle_fin.bmp')
         self.rect = self.image.get_rect()
 
         # Start each new shuttle at the bottom center of the screen.
@@ -21,9 +23,15 @@ class Shuttle:
         # Store a decimal value for the shuttle's horizontal position.
         self.x = float(self.rect.x)
 
+        # Store vertical position as float.
+        self.y = float(self.rect.y)
+
         # Movement flags.
         self.moving_right = False
         self.moving_left = False
+        self.moving_down = False
+        self.moving_up = False
+
 
     def update(self):
         """Update the shuttle's position based on the movement flag."""
@@ -37,8 +45,17 @@ class Shuttle:
             self.x -= self.settings.shuttle_speed
         
         # Update rect object from 'self.x'
-        # This allows is to use a FLOAT (decimals) instead of the default INT (no decimals)
+        # This allows us to use a FLOAT (decimals) instead of the default INT (no decimals)
         self.rect.x = self.x
+
+        if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
+            self.y += self.settings.shuttle_speed
+        if self.moving_up and self.rect.top > 0:
+            self.y -= self.settings.shuttle_speed
+
+        # Update rect object from 'self.y'
+        self.rect.y = self.y
+
 
     
     def blitme(self):
