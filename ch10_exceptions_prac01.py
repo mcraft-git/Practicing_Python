@@ -5,7 +5,6 @@
 
 # We can use a 'try' block to handle any exceptions we run into,
 # thus managing the error-producing code so it will run traceback-free.
-from asyncio.windows_events import NULL
 from tkinter import END
 
 # # # # # EXAMPLE # # # # #
