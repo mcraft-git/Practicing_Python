@@ -19,7 +19,7 @@ print(participants)
 # When we pass 'w' to open() as the 2nd argument
 # the file passed as the 1st argument is overwritten (so BE CAREFULL).
 # If there is no file with the given name, Python creates one (include extension).
-with open('pet_poll_answers.txt','w') as file_object:
+with open("Crash_Course_2\\pet_poll_answers.txt",'w') as file_object:
     # The write() function does not automatically insert newlines
     file_object.write("TOTALLY LEGIT POLL RESULTS\n")
 
@@ -35,12 +35,12 @@ for participant in participants:
     # When we pass 'a' as the 2nd argument to open(),
     # Python appends the string to the file.
     # With 'a', the file contents are not erased (unlike the 'w' argument).
-    with open('pet_poll_answers.txt', 'a') as file_object:
+    with open("Crash_Course_2\\pet_poll_answers.txt", 'a') as file_object:
         file_object.write(f"{participant}: {animal_type.title()}\n")
 
 print("\nThank you for involuntarily participating. Now, lets have those results!\n")
 
-with open("pet_poll_answers.txt") as file_object:
+with open("Crash_Course_2\\pet_poll_answers.txt") as file_object:
     contents = file_object.read()
     # We can use the 'count()' method to add up the total
     # number of occurences of the argument passed.

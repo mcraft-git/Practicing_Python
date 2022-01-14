@@ -3,7 +3,8 @@
 # To use it in a Python program, we must first import the 'json' module.
 import json
 
-username_file = "usernames.json"
+# This JSON file will be created in our secondary folder to store our usernames as JSON.
+username_file = "Crash_Course_2\\usernames.json"
 
 def create_new_username():
     """Creates new username file, or adds new username to existing file."""
