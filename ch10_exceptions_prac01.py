@@ -5,10 +5,15 @@
 
 # We can use a 'try' block to handle any exceptions we run into,
 # thus managing the error-producing code so it will run traceback-free.
-try:
-    print(5/0)
-except ZeroDivisionError:
-    print("Unfortunately, in this universe we can't divide by zero.")
+from asyncio.windows_events import NULL
+from tkinter import END
+
+# # # # # EXAMPLE # # # # #
+#try:
+#   print(5/0)
+#except ZeroDivisionError:
+#   print("Unfortunately, in this universe we can't divide by zero.")
+# # # # # EXAMPLE # # # # #
 
 
 # Let's see some try blocks and exceptions in action...
@@ -46,10 +51,10 @@ while questions:
                     print(f"\nAnswer is: {answer}")
                     more_questions = input("Human got more silly questions?! (y/n): ")
                     
-                    # If user inputs 'y' we break without setting the flag
+                    # If user inputs 'y' we END without setting the flag
                     # that our while loop is checking, sending them through again.
                     if more_questions == "y":
-                        break
+                        END
                     else:
                         questions = False
                         break
@@ -68,7 +73,7 @@ while questions:
                     print(f"\nAnswer is: {answer}")
                     more_questions = input("Human got more silly questions? (y/n): ")
                     if more_questions == "y":
-                        break
+                        END
                     else:
                         questions = False
                         break
@@ -87,7 +92,7 @@ while questions:
                     print(f"\nAnswer is: {answer}")
                     more_questions = input("Human got more silly questions? (y/n): ")
                     if more_questions == "y":
-                        break
+                        END
                     else:
                         questions = False
                         break
@@ -111,7 +116,7 @@ while questions:
                         print(f"\nAnswer is: {answer}")
                         more_questions = input("Human got more silly questions? (y/n): ")
                         if more_questions == "y":
-                            break
+                            END
                         else:
                             questions = False
                             break
