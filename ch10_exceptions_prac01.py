@@ -13,7 +13,7 @@ from tkinter import END
 #   print(5/0)
 #except ZeroDivisionError:
 #   print("Unfortunately, in this universe we can't divide by zero.")
-# # # # # EXAMPLE # # # # #
+# # # # # # # # # # # # # #
 
 
 # Let's see some try blocks and exceptions in action...
