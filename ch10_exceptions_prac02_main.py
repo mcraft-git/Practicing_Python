@@ -23,4 +23,6 @@ selection = random.choice(my_books)
 # Finally, the string containing the stored path is passed
 # to the imported class and an instance of 'BookParser' is created.
 # (see prac02_module)
-BP(selection)
+if __name__ == '__main__':
+
+    BP(selection)
