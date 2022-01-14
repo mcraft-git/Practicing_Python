@@ -15,7 +15,7 @@ def create_account():
     password = input("Enter a password: ")
     admin_pass = input("If you're an admin, do the thing: ")
 
-    # Condition is checked to determine what class should be.
+    # Input is checked as a conditional to determine what the class should be.
     if admin_pass == "hysterical admin":
 
         # "Admin" class is called (see module2) and passed input args,
